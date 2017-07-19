@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/generic-ble-module-android/generic-ble-module-android.iml" filepath="$PROJECT_DIR$/generic-ble-module-android/generic-ble-module-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/honeybee-interface-android.iml" filepath="$PROJECT_DIR$/honeybee-interface-android.iml" />
     </modules>
   </component>
