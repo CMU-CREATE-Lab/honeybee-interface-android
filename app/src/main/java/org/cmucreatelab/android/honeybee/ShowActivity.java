@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.cmucreatelab.android.genericblemodule.serial.SerialBleHandler;
@@ -78,12 +79,15 @@ public class ShowActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.v(Constants.TAG, "button_send onClick");
-                String text = textView.getText().toString();
-                if (text.length() == 0) {
-                    text = "ping";
-                }
-                // TODO send proper messages to join specified network
-                sendWithMessage(text);
+
+                // TODO check values for valid input
+                String textInputSecurityType, textInputSsid, textInputSecurityKey;
+                textInputSecurityType = ((EditText)findViewById(R.id.textInputSecurityType)).getText().toString();
+                textInputSsid = ((EditText)findViewById(R.id.textInputSsid)).getText().toString();
+                textInputSecurityKey = ((EditText)findViewById(R.id.textInputSecurityKey)).getText().toString();
+
+                String message = "J," + textInputSecurityType + "," + textInputSsid + "," + textInputSecurityKey;
+                sendWithMessage(message);
             }
         });
     }

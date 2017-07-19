@@ -59,7 +59,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/textInputSecurityKey"
         android:hint="security key (empty if open)" />
