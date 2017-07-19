@@ -16,8 +16,15 @@ public class ShowActivity extends AppCompatActivity {
 
     private final SerialBleHandler.NotificationListener notificationListener = new SerialBleHandler.NotificationListener() {
         @Override
-        public void onNotificationReceived(String messageSent, String response) {
+        public void onNotificationReceived(final String messageSent, final String response) {
             Log.v(Constants.TAG, messageSent + " => " + response);
+            //DialogHelper.displayDialog(ShowActivity.this, "Title", "Hello Clicky");
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    DialogHelper.displayDialog(ShowActivity.this, messageSent, response);
+                }
+            });
         }
     };
 
