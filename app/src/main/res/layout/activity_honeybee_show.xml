@@ -7,20 +7,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:text="I01" />
+        android:id="@+id/buttonI"
+        android:text="Get Device Information" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:text="W01" />
+        android:id="@+id/buttonW"
+        android:text="Get Wi-Fi Status" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:text="R01" />
+        android:id="@+id/buttonR"
+        android:text="Remove Network" />
 
     <TextView
         android:text="security type (1=open,2=wpa,3=wep)"
