@@ -18,12 +18,12 @@ public class ShowActivity extends AppCompatActivity {
     private final SerialBleHandler.NotificationListener notificationListener = new SerialBleHandler.NotificationListener() {
         @Override
         public void onNotificationReceived(final String messageSent, final String response) {
-            Log.v(Constants.TAG, messageSent + " => " + response);
-            //DialogHelper.displayDialog(ShowActivity.this, "Title", "Hello Clicky");
+            final String command = String.valueOf(messageSent.charAt(0));
+            Log.v(Constants.TAG, command + " => " + response);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    DialogHelper.displayDialog(ShowActivity.this, messageSent, response);
+                    DialogHelper.displayDialog(ShowActivity.this, command, response);
                 }
             });
         }
@@ -47,8 +47,6 @@ public class ShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.v(Constants.TAG, "ShowActivity.onCreate");
         setContentView(R.layout.activity_honeybee_show);
-
-        final TextView textView = (TextView)findViewById(R.id.textInputSecurityKey);
 
         // I
         findViewById(R.id.buttonI).setOnClickListener(new View.OnClickListener() {
