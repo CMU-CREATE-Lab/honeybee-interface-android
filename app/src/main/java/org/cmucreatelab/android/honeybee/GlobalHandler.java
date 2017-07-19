@@ -61,9 +61,8 @@ public class GlobalHandler {
                     setCharacteristicNotification(characteristic, true);
                 }
 
-//                Intent intent = new Intent(activity, ShowActivity.class);
-//                activity.startActivity(intent);
-                Log.i(Constants.TAG, "DEVICE CONNECTED!");
+                Intent intent = new Intent(activity, ShowActivity.class);
+                activity.startActivity(intent);
             }
         });
     }
